@@ -1,12 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { createListenerMiddleware, isAnyOf } from "@reduxjs/toolkit";
-import userReducer, { fetchUser } from "./userSlice";
+import userReducer from "./userSlice";
+import postReducer from "./postSlice"
 
 
 
 export const store = configureStore({
     reducer: {
       user: userReducer,
+      post: postReducer
     },
     middleware: (getDefaultMiddleware) => [
       ...getDefaultMiddleware(),

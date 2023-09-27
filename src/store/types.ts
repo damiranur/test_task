@@ -11,3 +11,17 @@ export interface IUserData {
     phone: string,
     website: string, 
 }
+
+export interface IPostState {
+    postsData: IPostData[],
+    loading: boolean,
+    error: string,
+
+}
+
+export interface IPostData {
+    userId: number,
+    id: number,
+    title: string, 
+    body: string,
+}
